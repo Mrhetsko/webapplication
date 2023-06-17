@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <a href="{% url 'api_docs' %}" class="button">API interactive DOCS</a>
+    <div>
+        <h3>Add new post</h3>
+
+        <form  method="POST">
+        {% csrf_token %}
+
+        <label for="user_id">User ID</label>
+        <input id="user_id" required="required" name="user_id" type="number" placeholder="User ID">
+
+        <label for="title">Post title</label>
+        <input id="title" name="title" type="text" placeholder="Title">
+
+        <label for="body">Message:</label>
+        <input id="body" name="body" type="text" placeholder="Title">
+
+        <button type="submit">Add post</button>
+    </form>
+        {% if message %}
+            <p>{{ message }}</p>
+        {% endif %}
+    </div>
+    <hr>
+
+    <table>
+        <tr>
+            <th>post id</th>
+            <th>userid</th>
+            <th>title</th>
+            <th>body</th>
+            <th>Actions</th>
+        </tr>
+        {% for post in posts %}
+
+        <tr>
+
+            <td>{{ post.id }}</td>
+            <td>{{ post.userId }}</td>
+            <th>{{ post.title }}</th>
+            <td>{{ post.body }}</td>
+            <td>
+                <a href="{% url 'update' post.id %}" class="button">Update post</a>
+                <hr>
+                <form action="{% url 'delete' post.id %}" method="POST">
+                    {% csrf_token %}
+                    <button type="submit">Delete</button>
+                </form>
+            </td>
+        </tr>
+
+        {% endfor %}
+    </table>
+</body>
+</html>

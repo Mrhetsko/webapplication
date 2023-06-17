@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <form  method="POST">
+        {% csrf_token %}
+        <p>Update post</p>
+        <label for="new_title">New title</label>
+        <input id="new_title" name="new_title" type="text" placeholder="new title"><br>
+
+        <label for="new_body">New post</label>
+        <input id="new_body" name="new_body" type="text" placeholder="new post">
+        <br>
+        <button type="submit">Update</button>
+
+    </form>
+
+</body>
+</html>
