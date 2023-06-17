@@ -19,21 +19,21 @@ Make sure you have the following installed before running the application:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/Mrhetsko/webapp.git
+   git clone https://github.com/Mrhetsko/webapplication.git
    ```
-2. Move to webapp directory:
+2. Move to "webapp" directory:
    ```bash
    cd webapp
    ```
 
 3. Create virtual environment:
    ```bash
-   python3 -m venv my_venv_name
+   python3 -m venv venv
    ```
    
 4. Activate virtual environment:
     ```bash
-    my_venv_name/Scripts/activate.ps1
+    venv/Scripts/activate.ps1
 
 5. Upgrade pip:
    ```bash
@@ -60,7 +60,7 @@ P.S. I am aware that normally settings.py, database and some other files shouldn
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/Mrhetsko/webapp.git
+   git clone https://github.com/Mrhetsko/webapplication.git
    ```
 2. Move to webapp directory:
    ```bash
