@@ -21,9 +21,9 @@ Make sure you have the following installed before running the application:
    ```bash
    git clone https://github.com/Mrhetsko/webapplication.git
    ```
-2. Move to "webapp" directory:
+2. Move to "webapplication" directory:
    ```bash
-   cd webapp
+   cd webapplication
    ```
 
 3. Create virtual environment:
@@ -62,7 +62,7 @@ P.S. I am aware that normally settings.py, database and some other files shouldn
    ```bash
    git clone https://github.com/Mrhetsko/webapplication.git
    ```
-2. Move to webapp directory:
+2. Move to webapplication directory:
    ```bash
    cd webapplication
 
