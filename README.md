@@ -64,7 +64,7 @@ P.S. I am aware that normally settings.py, database and some other files shouldn
    ```
 2. Move to webapp directory:
    ```bash
-   cd webapp
+   cd webapplication
 
 3. Build:
    ```bash
